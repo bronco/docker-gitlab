@@ -22,7 +22,7 @@ services:
 
   gitlab:
     restart: always
-    image: broncolee/gitlab:12.7.5
+    image: broncolee/gitlab:12.7.6
     depends_on:
     - redis
     - postgresql
