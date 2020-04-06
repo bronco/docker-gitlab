@@ -22,7 +22,7 @@ services:
 
   gitlab:
     restart: always
-    image: broncolee/gitlab:12.9.2
+    image: broncolee/gitlab:12.9.2.1
     depends_on:
     - redis
     - postgresql
@@ -70,6 +70,7 @@ services:
 
     - GITLAB_BACKUP_SCHEDULE=daily
     - GITLAB_BACKUP_TIME=01:00
+    - GITLAB_BACKUP_STRATEGY=copy
 
     - SMTP_ENABLED=false
     - SMTP_DOMAIN=www.example.com
